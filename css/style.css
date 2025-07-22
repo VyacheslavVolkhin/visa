@@ -718,6 +718,8 @@ html.with-fancybox body.hide-scrollbar {
   padding: 3rem 0 2rem 0;
   font-size: 17px;
   line-height: 1.29411765;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .footer-main-panel .logo-inner-wrap {
   padding: 20px 0 20px 0;
