@@ -2619,7 +2619,10 @@ body.popup-open {
       flex-direction: column;
   -ms-flex-pack: end;
       justify-content: flex-end;
+  top: auto;
+  height: auto;
   padding: 20px var(--paddingContainer);
+  background: none;
 }
 .popup-box {
   display: -ms-flexbox;
