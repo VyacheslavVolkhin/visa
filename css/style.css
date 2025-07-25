@@ -590,6 +590,9 @@ html.with-fancybox body.hide-scrollbar {
 .header .logo {
   font-size: 16px;
 }
+.header .logo-main {
+  max-width: 120px;
+}
 .popup-menu-wrap .popup-content-block {
   display: none;
 }
@@ -806,6 +809,17 @@ html.with-fancybox body.hide-scrollbar {
 .footer-bottom-panel a {
   color: #fff;
 }
+.logo-main {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  text-decoration: none;
+}
+.logo-main img,
+.logo-main svg {
+  display: block;
+  width: 100%;
+}
 .logo {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -983,6 +997,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .header .logo {
     font-size: 2rem;
+  }
+  .header .logo-main {
+    max-width: 19.5rem;
   }
   .popup-menu-wrap .popup-content-block {
     display: block;
@@ -2251,7 +2268,7 @@ html.with-fancybox body.hide-scrollbar {
   margin-bottom: var(--mSection);
   position: relative;
   line-height: 1;
-  background: #853899;
+  background: #115199;
   color: #fff;
 }
 .slider-line-box .slider-wrap {
@@ -2268,7 +2285,7 @@ html.with-fancybox body.hide-scrollbar {
   width: auto;
 }
 .slider-line-box .sl-wrap {
-  background: #853899;
+  background: #115199;
   padding: 0;
 }
 .slider-line-box .sl-title {
