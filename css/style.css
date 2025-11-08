@@ -1057,6 +1057,75 @@ html.with-fancybox body.hide-scrollbar {
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-article {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  background: var(--clr-bg-light);
+  border-radius: var(--mainRadius);
+  overflow: hidden;
+  color: var(--clr-base);
+}
+.item-tile-article:hover {
+  color: var(--clr-base);
+}
+.item-tile-article:hover .tile-photo-wrap:after {
+  filter: none;
+}
+.item-tile-article:hover .tile-title {
+  color: var(--clr-att);
+}
+.item-tile-article .tile-photo-wrap {
+  display: block;
+  position: relative;
+}
+.item-tile-article .tile-photo-wrap:before,
+.item-tile-article .tile-photo-wrap:after {
+  content: "";
+  display: block;
+  width: 40px;
+  width: 4rem;
+  height: 40px;
+  height: 4rem;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  bottom: 3rem;
+  left: 30px;
+  left: 3rem;
+}
+.item-tile-article .tile-photo-wrap:after {
+  background: url(../img/icons/arrow-button.svg) center no-repeat;
+  background-size: 2.4rem auto;
+  filter: grayscale(100%);
+  transition: all ease 0.2s;
+}
+.item-tile-article .tile-info-wrap {
+  display: block;
+  padding: 26px 30px 40px 30px;
+  padding: 2.6rem 3rem 4rem 3rem;
+}
+.item-tile-article .tile-photo {
+  aspect-ratio: 520/293;
+  border-radius: var(--mainRadius);
+}
+.item-tile-article .tile-info {
+  display: block;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 1.29411765;
+  margin: 0 0 1.3em 0;
+}
+.item-tile-article .tile-title {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 0.88;
+  display: block;
+  font-weight: bold;
+  transition: color ease 0.2s;
+}
 .section-bg .tile-main:not(:hover, .active) {
   background: #fff;
 }
@@ -1909,6 +1978,9 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (max-width: 1023px) {
+  .item-tile-article .tile-info-wrap {
+    padding: 24px 15px;
+  }
   .tile-main {
     padding: 15px;
   }
@@ -1928,6 +2000,56 @@ html.with-fancybox body.hide-scrollbar {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.tiles-slider-box {
+  margin-bottom: var(--mSection);
+  position: relative;
+}
+.tiles-slider-box .slider-wrap {
+  margin: 0 -10px;
+  margin: 0 -1rem;
+}
+.tiles-slider-box .sl-wrap {
+  padding: 0 10px;
+  padding: 0 1rem;
+}
+.more-inner-box {
+  margin-top: 50px;
+  margin-top: 5rem;
+  text-align: center;
+}
+.more-inner-box .btn {
+  height: 50px;
+  height: 5rem;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  gap: 20px;
+  gap: 2rem;
+}
+.more-inner-box .btn.button-light .button-ico {
+  filter: none;
+  background: var(--clr-att);
+}
+.more-inner-box .btn.button-light .button-ico img,
+.more-inner-box .btn.button-light .button-ico svg {
+  filter: brightness(0) invert(1);
+}
+.more-inner-box .btn .button-ico {
+  width: 40px;
+  width: 4rem;
+  height: 40px;
+  height: 4rem;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.more-inner-box .btn .button-ico img,
+.more-inner-box .btn .button-ico svg {
+  filter: none;
+  max-width: 24px;
+  max-width: 2.4rem;
+}
 .info-steps-box {
   display: -ms-flexbox;
   display: flex;
@@ -2555,6 +2677,19 @@ html.with-fancybox body.hide-scrollbar {
 .article-box a:not([class]) {
   border-bottom: 1px solid;
 }
+.article-inner-wrap .article-date,
+.article-box .article-date {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--clr-att);
+  font-weight: 500;
+  margin: 0 0 1em 0;
+}
+.article-inner-wrap .article-date + *,
+.article-box .article-date + * {
+  margin-top: 0;
+}
 .article-inner-wrap li,
 .article-box li {
   font-weight: 500;
@@ -2906,6 +3041,13 @@ body.popup-open {
   }
 }
 @media (min-width: 1024px) {
+  .more-inner-box {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .more-inner-box .btn {
+    max-width: calc(33.33% - 2rem);
+  }
   .info-steps-box .tiles-inner-wrap .items-wrap {
     margin: 0 -1.5rem -3rem -1.5rem;
   }

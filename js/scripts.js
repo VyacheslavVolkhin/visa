@@ -236,4 +236,34 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	});
 
+	//slider
+	const slidersarticles = document.querySelectorAll(".slider-articles");
+	
+	slidersarticles.forEach((container) => {
+		const swiperEl = container.querySelector(".swiper");
+		const nextEl = container.querySelector(".button-slider-articles-next");
+		const prevEl = container.querySelector(".button-slider-articles-prev");
+	
+		if (!swiperEl) return;
+	
+		new Swiper(swiperEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 400,
+			pagination: false,
+			autoplay: false,
+			navigation: {
+				nextEl: nextEl,
+				prevEl: prevEl,
+			},
+			breakpoints: {
+				480: { slidesPerView: 2 },
+				1024: { slidesPerView: 3 },
+			},
+		});
+	});
+
 })
